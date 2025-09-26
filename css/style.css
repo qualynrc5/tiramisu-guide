@@ -59,3 +59,86 @@ ul, ol {
   border-radius: 10px;
 }
 /* Commit test: no visible changes */
+
+/* ============== Accessibility helpers ============== */
+
+/* Skip link - visually hidden until focused */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #000;
+  z-index: 9999;
+}
+
+/* Ensure focus is visible for keyboard users */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 3px dashed #ffa500; /* visible focus ring */
+  outline-offset: 2px;
+}
+
+/* Highlight area — ensure high contrast */
+.highlight {
+  background-color: #222222; /* dark bg */
+  color: #ffffff;            /* white text = good contrast */
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Basic flex container for content image + list */
+.flex-container {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Make figure responsive */
+figure {
+  margin: 0;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navigation styling */
+.primary-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  gap: 1rem;
+}
+.primary-nav a {
+  text-decoration: none;
+}
+
+/* ============== Responsive media query ============== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* slightly larger base for readability on small screens */
+    padding: 0.5rem;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .primary-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

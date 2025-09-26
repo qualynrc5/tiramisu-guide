@@ -7,15 +7,23 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- Header section with main title -->
   <header>
     <h1>Tiramisu Test Page</h1>
+
+    <nav aria-label="Primary navigation">
+      <ul class="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Learn more about tiramisu</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Main content section -->
-  <main>
-    <section>
+  <main id="main-content">
+    <section aria-labelledby="ingredients-heading">
       <!-- Introductory paragraph -->
       <p class="highlight">If you see this in your browser, your HTML is working!</p>
 
@@ -23,7 +31,7 @@
       <p>This page is all about tiramisu, the famous Italian dessert.</p>
 
       <!-- Subheading for ingredients -->
-      <h2>Ingredients for Tiramisu</h2>
+      <h2 id="ingredients-heading">Ingredients for Tiramisu</h2>
       <!-- Unordered list of ingredients -->
       <ul id="ingredients">
         <li>Mascarpone cheese</li>
@@ -32,10 +40,12 @@
         <li>Cocoa powder</li>
         <li>Sugar</li>
       </ul>
+    </section>
 <!-- Third commit: verified images folder exists -->
 <!-- Fourth commit: finished initial draft of index.html and page2.html-->
       <!-- Subheading for steps -->
-      <h2>Steps to Make Tiramisu</h2>
+    <section aria-labelledby="steps-heading">
+      <h2 id="steps-heading">Steps to Make Tiramisu</h2>
       <div class="flex-container">
       <!-- Ordered list of steps -->
       <ol>
@@ -46,16 +56,21 @@
         <li>Dust with cocoa powder and chill before serving.</li>
       </ol>
 
-      <!-- Add an image of tiramisu -->
-      <img src="images/tiramisu.jpg" alt="Delicious tiramisu dessert" width="300">
-      </div>
-    </section>
+      <!-- image moved into figure -->
+      <figure>
+        <img src="images/tiramisu.jpg" alt="Slice of tiramisu with visible layers of mascarpone and coffee-soaked ladyfingers, dusted with cocoa." />
+      <figcaption>Classic tiramisu with mascarpone and cocoa dusting.</figcaption>
+    </div>
+  </section>
   </main>
 
   <!-- Footer section with internal link to page2.html -->
-  <footer>
-    <a href="page2.html">Read more on Page 2</a>
-  </footer>
+<footer>
+    <a href="index.html">Home</a>
+    <a href="page2.html">Learn more about tiramisu</a>
+  </nav>
+  <p>&copy; 2025 Tiramisu Test Page</p>
+</footer>
 
 </body>
 </html>
