@@ -3,43 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiramisu Page 2</title>
+  <title>Learn More About Tiramisu</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Header section -->
+  <!-- Header section with main title -->
   <header>
-    <h1>More About Tiramisu</h1>
+    <h1>Learn More About Tiramisu</h1>
+
+    <nav aria-label="Primary navigation">
+      <ul class="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Learn more about tiramisu</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Main content -->
-  <main>
-    <section>
-      <!-- Intro paragraph -->
-      <p class="highlight">Welcome to page 2! Here we explore more details about tiramisu, including its history and variations.</p>
-
-      <!-- Another paragraph -->
-      <p>Tiramisu originated in Italy in the 1960s and has become a world-famous dessert. There are many variations, including chocolate, strawberry, and matcha flavors.</p>
-
-      <!-- Subheading for fun facts -->
-      <h2>Fun Facts About Tiramisu</h2>
-      <!-- Unordered list of fun facts -->
+  <!-- Main content section -->
+  <main id="main-content">
+    <section aria-labelledby="fun-facts-heading">
+      <h2 id="fun-facts-heading">Fun Facts About Tiramisu</h2>
       <ul id="fun-facts">
-        <li>The name "Tiramisu" means "pick me up" in Italian.</li>
-        <li>It was originally made without alcohol in some regions.</li>
-        <li>The dessert is traditionally served chilled.</li>
-      </ul>
-
-      <!-- Optional image -->
-      <img src="images/tiramisu.jpg" alt="Delicious tiramisu dessert" width="300">
+        <li>“Tiramisu” means “pick me up” in Italian.</li>
+        <li>It became popular worldwide in the 1980s.</li>
+        <li>Traditional recipes use raw egg yolks, but modern versions often skip them for safety.</li>
+        <li>Some variations include strawberries, matcha, or even lemon.</li>
+       </ul>
     </section>
   </main>
 
-  <!-- Footer with internal link back to index.html -->
+  <!-- Footer section -->
   <footer>
-    <a href="index.html">Back to Home</a>
-  </footer>
-
+    <a href="index.html">Home</a>
+    <a href="page2.html">Learn more about tiramisu</a>
+    <p>&copy; 2025 Tiramisu Test Page</p>
+   </footer>
 </body>
 </html>
