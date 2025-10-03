@@ -1,144 +1,129 @@
-/* General page style */
+/* ==== Page basics ==== */
 body {
   background-color: #f9f9f9;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif; 
+  line-height: 1.6;            
+  margin: 0;                   /* Bootstrap resets this */
+  padding: 0;                  /* Bootstrap resets this */
 }
 
-/* Style for headers */
+/* ==== Headings (h1, h2) ==== */
 h1, h2 {
-  text-align: center;
-  color: #333;
+  text-align: center;  
+  color: #333;         
 }
 
-/* Style for paragraphs */
+/* ==== Paragraphs ==== */
 p {
-  text-align: left;
-  margin: 10px 20px;
+  text-align: left;       /* Default in Bootstrap */
+  margin: 10px 20px;      
 }
 
-/* Style for lists */
+/* ==== Lists ==== */
 ul, ol {
-  margin: 10px 40px;
+  margin: 10px 40px;      
 }
 
-/* Class for highlighting important text */
+/* ==== Highlighted text section ==== */
 .highlight {
-  background-color: #fffae6;
-  padding: 5px;
-  border-left: 3px solid #f4a261;
+  background-color: #222222; 
+  color: #ffffff;            
+  padding: 0.5rem;           
+  border-radius: 4px;        
 }
 
-/* ID for ingredients list */
+/* Custom colors and backgrounds */
 #ingredients {
   background-color: #e0f7fa;
   padding: 10px;
   border-radius: 5px;
 }
 
-/* ID for fun facts list */
+/* Unique footer design */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ==== Fun facts box ==== */
 #fun-facts {
-  background-color: #fce4ec;
+  background-color: #fce4ec; 
   padding: 10px;
   border-radius: 5px;
 }
 
-/* Flexbox layout */
+/* ==== Image + content layout ==== */
 .flex-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 20px;
+  display: flex;             /* Bootstrap: .d-flex */
+  gap: 1.25rem;              /* Bootstrap: gap utilities */
+  align-items: flex-start;   /* Bootstrap: .align-items-start */
+  flex-wrap: wrap;           /* Bootstrap: .flex-wrap */
+  margin: 20px;              /* Bootstrap: spacing utilities */
 }
 
+/* ==== Images inside flexbox ==== */
 .flex-container img {
-  max-width: 300px;
-  border-radius: 10px;
+  max-width: 300px;  
+  border-radius: 10px; 
 }
-/* Commit test: no visible changes */
 
-/* ============== Accessibility helpers ============== */
+/* ==== Figure images ==== */
+figure {
+  margin: 0; /* Bootstrap already removes margin */
+}
+figure img {
+  max-width: 100%;   /* Bootstrap: .img-fluid */
+  height: auto;      
+  display: block;    
+}
 
-/* Skip link - visually hidden until focused */
+/* ==== Navigation menu ==== */
+.primary-nav {
+  list-style: none;  
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;     /* Bootstrap: .d-flex */
+  gap: 1rem;         /* Bootstrap: gap utilities */
+}
+.primary-nav a {
+  text-decoration: none; /* Bootstrap: .text-decoration-none */
+}
+
+/* ==== Accessibility: Skip link ==== */
 .skip-link {
-  position: absolute;
+  position: absolute; 
   left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
 }
 .skip-link:focus {
-  left: 1rem;
+  left: 1rem;        
   top: 1rem;
-  width: auto;
-  height: auto;
-  padding: 8px 12px;
+  padding: 8px 12px; 
   background: #ffffff;
   color: #000000;
   border: 2px solid #000;
-  z-index: 9999;
+  z-index: 9999;     
 }
 
-/* Ensure focus is visible for keyboard users */
+/* ==== Accessibility: Focus outlines ==== */
 a:focus, button:focus, input:focus, textarea:focus {
-  outline: 3px dashed #ffa500; /* visible focus ring */
+  outline: 3px dashed #ffa500; 
   outline-offset: 2px;
 }
 
-/* Highlight area — ensure high contrast */
-.highlight {
-  background-color: #222222; /* dark bg */
-  color: #ffffff;            /* white text = good contrast */
-  padding: 0.5rem;
-  border-radius: 4px;
-}
-
-/* Basic flex container for content image + list */
-.flex-container {
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-/* Make figure responsive */
-figure {
-  margin: 0;
-}
-figure img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Navigation styling */
-.primary-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0 0;
-  display: flex;
-  gap: 1rem;
-}
-.primary-nav a {
-  text-decoration: none;
-}
-
-/* ============== Responsive media query ============== */
+/* ==== Responsive changes (small screens) ==== */
 @media (max-width: 768px) {
   body {
-    font-size: 16px; /* slightly larger base for readability on small screens */
-    padding: 0.5rem;
+    font-size: 16px;   
+    padding: 0.5rem;   
   }
   .flex-container {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: column;  /* Bootstrap: .flex-column */
+    align-items: stretch;    /* Bootstrap: .align-items-stretch */
   }
   .primary-nav {
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: column;  /* Bootstrap: .flex-column */
+    gap: 0.5rem;             
   }
 }
