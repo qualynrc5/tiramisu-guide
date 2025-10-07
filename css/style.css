@@ -1,131 +1,87 @@
-/* ==== Page basics ==== */
+/* ==== Base Styling ==== */
 body {
-  background-color: #f9f9f9;
-  font-family: Arial, sans-serif; 
-  line-height: 1.6;            
-  margin: 0;                   /* Bootstrap resets this */
-  padding: 0;                  /* Bootstrap resets this */
+  background-color: #f8f5f2; /* soft latte color */
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #3c2f2f; /* mocha text */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-/* ==== Headings (h1, h2) ==== */
+/* ==== Header ==== */
+header {
+  background-color: #4b3832; /* deep coffee */
+}
+
+/* ==== Headings ==== */
 h1, h2 {
-  text-align: center;  
-  color: #333;         
+  color: #3c2f2f;
+  text-align: center;
 }
 
-/* ==== Paragraphs ==== */
-p {
-  text-align: left;       /* Default in Bootstrap */
-  margin: 10px 20px;      
+/* ==== Section Boxes ==== */
+.content-box {
+  background-color: #fffdfb; /* creamy white */
+  border: 2px solid #d6c2b5; /* latte border */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(102, 80, 62, 0.1);
 }
 
 /* ==== Lists ==== */
 ul, ol {
-  margin: 10px 40px;      
+  margin: 10px 40px;
 }
 
-/* ==== Highlighted text section ==== */
-.highlight {
-  background-color: #222222; 
-  color: #ffffff;            
-  padding: 0.5rem;           
-  border-radius: 4px;        
+/* ==== Image Styling ==== */
+figure img, .small-photo {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(80, 60, 40, 0.2);
+}
+.small-photo {
+  max-width: 300px;
 }
 
-/* Custom colors and backgrounds */
-#ingredients {
-  background-color: #e0f7fa;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Unique footer design */
+/* ==== Footer ==== */
 footer {
-  background-color: #333;
+  background-color: #4b3832;
   color: #fff;
-  text-align: center;
-  padding: 1rem;
 }
 
-/* ==== Fun facts box ==== */
-#fun-facts {
-  background-color: #fce4ec; 
-  padding: 10px;
-  border-radius: 5px;
+/* ==== Navigation ==== */
+.primary-nav a:hover {
+  color: #cbb994; /* cappuccino hover tone */
 }
 
-/* ==== Image + content layout ==== */
-.flex-container {
-  display: flex;             /* Bootstrap: .d-flex */
-  gap: 1.25rem;              /* Bootstrap: gap utilities */
-  align-items: flex-start;   /* Bootstrap: .align-items-start */
-  flex-wrap: wrap;           /* Bootstrap: .flex-wrap */
-  margin: 20px;              /* Bootstrap: spacing utilities */
-}
-
-/* ==== Images inside flexbox ==== */
-.flex-container img {
-  max-width: 300px;  
-  border-radius: 10px; 
-}
-
-/* ==== Figure images ==== */
-figure {
-  margin: 0; /* Bootstrap already removes margin */
-}
-figure img {
-  max-width: 100%;   /* Bootstrap: .img-fluid */
-  height: auto;      
-  display: block;    
-}
-
-/* ==== Navigation menu ==== */
-.primary-nav {
-  list-style: none;  
-  padding: 0;
-  margin: 0.5rem 0 0 0;
-  display: flex;     /* Bootstrap: .d-flex */
-  gap: 1rem;         /* Bootstrap: gap utilities */
-}
-.primary-nav a {
-  text-decoration: none; /* Bootstrap: .text-decoration-none */
-}
-
-/* ==== Accessibility: Skip link ==== */
+/* ==== Accessibility ==== */
 .skip-link {
-  position: absolute; 
+  position: absolute;
   left: -9999px;
 }
 .skip-link:focus {
-  left: 1rem;        
+  left: 1rem;
   top: 1rem;
-  padding: 8px 12px; 
+  padding: 8px 12px;
   background: #ffffff;
   color: #000000;
   border: 2px solid #000;
-  z-index: 9999;     
+  z-index: 9999;
 }
 
-/* ==== Accessibility: Focus outlines ==== */
 a:focus, button:focus, input:focus, textarea:focus {
-  outline: 3px dashed #ffa500; 
+  outline: 3px dashed #d4a373;
   outline-offset: 2px;
 }
 
-/* ==== Responsive changes (small screens) ==== */
+/* ==== Responsive ==== */
 @media (max-width: 768px) {
   body {
-    font-size: 16px;   
-    padding: 0.5rem;   
+    font-size: 16px;
+    padding: 0.5rem;
   }
-  .flex-container {
-    flex-direction: column;  /* Bootstrap: .flex-column */
-    align-items: stretch;    /* Bootstrap: .align-items-stretch */
-  }
-  .primary-nav {
-    flex-direction: column;  /* Bootstrap: .flex-column */
-    gap: 0.5rem;             
+  .content-box {
+    margin: 10px;
   }
 }
 
-/*

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiramisu Test Page</title>
+  <title>Tiramisu Dessert Guide</title>
 
-  <!-- Bootstrap CSS link -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- custom CSS -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-light">
@@ -16,7 +16,7 @@
 
   <!-- Header -->
   <header class="bg-dark text-white text-center p-3">
-    <h1>Tiramisu Test Page</h1>
+    <h1>Tiramisu Dessert Guide</h1>
     <nav aria-label="Primary navigation">
       <ul class="primary-nav d-flex justify-content-center gap-3 list-unstyled">
         <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
@@ -27,12 +27,14 @@
 
   <!-- Main content -->
   <main id="main-content" class="container my-4">
-    <section aria-labelledby="ingredients-heading" class="mb-4">
-      <p class="highlight">If you see this in your browser, your HTML is working!</p>
-      <p>This page is all about tiramisu, the famous Italian dessert.</p>
+    <section aria-labelledby="intro-heading" class="text-center mb-4">
+      <p>Welcome to your ultimate guide to Tiramisu, the world-famous Italian dessert loved for its creamy layers and coffee flavor.</p>
+    </section>
 
-      <h2 id="ingredients-heading" class="text-center">Ingredients for Tiramisu</h2>
-      <ul id="ingredients" class="list-unstyled">
+    <!-- Ingredients Box -->
+    <section aria-labelledby="ingredients-heading" class="content-box mb-4">
+      <h2 id="ingredients-heading">Ingredients for Tiramisu</h2>
+      <ul class="list-unstyled">
         <li>Mascarpone cheese</li>
         <li>Ladyfinger biscuits</li>
         <li>Coffee</li>
@@ -41,23 +43,25 @@
       </ul>
     </section>
 
-    <!-- Steps section with Bootstrap grid -->
-    <section aria-labelledby="steps-heading" class="row g-4">
-      <h2 id="steps-heading" class="text-center">Steps to Make Tiramisu</h2>
-      <div class="col-md-6">
-        <ol>
-          <li>Brew strong coffee and let it cool.</li>
-          <li>Mix mascarpone with sugar and egg yolks.</li>
-          <li>Dip ladyfingers in coffee and layer them in a dish.</li>
-          <li>Spread mascarpone mixture on top and repeat layers.</li>
-          <li>Dust with cocoa powder and chill before serving.</li>
-        </ol>
-      </div>
-      <div class="col-md-6">
-        <figure>
-          <img src="images/tiramisu.jpg" class="img-fluid rounded" alt="Slice of tiramisu with visible layers of mascarpone and coffee-soaked ladyfingers, dusted with cocoa." />
-          <figcaption class="text-center">Classic tiramisu with mascarpone and cocoa dusting.</figcaption>
-        </figure>
+    <!-- Steps Section -->
+    <section aria-labelledby="steps-heading" class="content-box mb-4">
+      <h2 id="steps-heading">Steps to Make Tiramisu</h2>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <ol>
+            <li>Brew strong coffee and let it cool.</li>
+            <li>Mix mascarpone with sugar and egg yolks.</li>
+            <li>Dip ladyfingers in coffee and layer them in a dish.</li>
+            <li>Spread mascarpone mixture on top and repeat layers.</li>
+            <li>Dust with cocoa powder and chill before serving.</li>
+          </ol>
+        </div>
+        <div class="col-md-6 text-center">
+          <figure>
+            <img src="images/tiramisu.jpg" class="img-fluid rounded shadow-sm" alt="Slice of tiramisu with visible layers of mascarpone and coffee-soaked ladyfingers, dusted with cocoa.">
+            <figcaption class="text-muted mt-2">Classic tiramisu with mascarpone and cocoa dusting.</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
   </main>
@@ -66,9 +70,8 @@
   <footer class="bg-dark text-white text-center p-3">
     <a href="index.html" class="text-white text-decoration-none me-3">Home</a>
     <a href="page2.html" class="text-white text-decoration-none">Learn more about tiramisu</a>
-    <p class="mt-2">&copy; 2025 Tiramisu Test Page</p>
+    <p class="mt-2 mb-0">&copy; 2025 Tiramisu Dessert Guide</p>
   </footer>
 </body>
 </html>
 
-<!---->
